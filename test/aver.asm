@@ -1,13 +1,12 @@
-section .data
-    res db '0'
+section .bss
+    res resb 1
 
-section .text
+section .text 
     global _start
 
 _start:
-
-    mov eax, 1
-    mov ecx, 7
+    mov eax, 2
+    mov ecx, 8
 
     add eax, ecx
     add eax, 48
@@ -22,5 +21,3 @@ _start:
     mov edx, 1
     mov ebx, 0
     int 0x80
-
-
